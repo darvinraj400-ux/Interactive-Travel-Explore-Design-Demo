@@ -40,7 +40,7 @@ export function TripSummary() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="px-4 pt-16 md:pt-6 pb-20 md:pb-8 max-w-4xl mx-auto"
+      className="px-4 py-6 pb-20 md:pb-8 max-w-4xl mx-auto"
     >
       {/* Header */}
       <div className="flex items-center gap-3 mb-6">

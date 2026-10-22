@@ -281,7 +281,7 @@ export function ItineraryBuilder() {
       className="pb-20 md:pb-8"
     >
       {/* Header */}
-      <div className={`bg-gradient-to-br ${destination.gradient} px-4 pt-16 md:pt-6 pb-8`}>
+      <div className={`bg-gradient-to-br ${destination.gradient} px-4 pt-6 pb-8`}>
         <div className="max-w-3xl mx-auto">
           <button
             onClick={() => navigate(-1)}

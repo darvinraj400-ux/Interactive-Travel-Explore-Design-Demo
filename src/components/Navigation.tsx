@@ -189,8 +189,7 @@ export function Navigation() {
         )}
       </AnimatePresence>
 
-      {/* Spacer for desktop nav */}
-      <div className="hidden md:block h-16" />
+
     </>
   );
 }

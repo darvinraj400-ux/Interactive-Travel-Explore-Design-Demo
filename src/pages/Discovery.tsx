@@ -86,7 +86,7 @@ export function Discovery() {
         <div className="absolute inset-0 opacity-20">
           <StylizedMap />
         </div>
-        <div className="relative z-10 px-4 pt-16 pb-12 md:pt-16 md:pb-20 max-w-7xl mx-auto">
+        <div className="relative z-10 px-4 pt-8 pb-12 md:pt-16 md:pb-20 max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

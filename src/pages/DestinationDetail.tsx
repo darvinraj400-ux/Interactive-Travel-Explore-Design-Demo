@@ -58,7 +58,7 @@ export function DestinationDetail() {
         {/* Back button */}
         <button
           onClick={() => navigate(-1)}
-          className="absolute top-16 md:top-4 left-4 w-10 h-10 bg-earth-800/60 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-earth-800/80 transition-colors"
+          className="absolute top-4 left-4 w-10 h-10 bg-earth-800/60 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-earth-800/80 transition-colors"
           aria-label="Go back"
         >
           <ArrowLeft size={20} />
@@ -67,7 +67,7 @@ export function DestinationDetail() {
         {/* Save button */}
         <button
           onClick={() => dispatch({ type: 'TOGGLE_SAVE_DESTINATION', destinationId: destination.id })}
-          className={`absolute top-16 md:top-4 right-4 w-10 h-10 rounded-full flex items-center justify-center transition-all ${
+          className={`absolute top-4 right-4 w-10 h-10 rounded-full flex items-center justify-center transition-all ${
             saved ? 'bg-sunset-500 text-white' : 'bg-earth-800/60 backdrop-blur-sm text-white hover:bg-earth-800/80'
           }`}
           aria-label={saved ? 'Remove from saved' : 'Save destination'}

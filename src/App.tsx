@@ -28,6 +28,8 @@ export default function App() {
     <AppProvider>
       <BrowserRouter>
         <div className="min-h-screen bg-earth-50 paper-texture">
+          {/* Spacer for fixed navbar */}
+          <div className="h-14 md:h-16" />
           <AnimatedRoutes />
           <Navigation />
         </div>
