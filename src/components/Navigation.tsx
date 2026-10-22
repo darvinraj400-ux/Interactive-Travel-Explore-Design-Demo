@@ -191,8 +191,6 @@ export function Navigation() {
 
       {/* Spacer for desktop nav */}
       <div className="hidden md:block h-16" />
-      {/* Spacer for mobile top header + bottom nav */}
-      <div className="md:hidden h-28" />
     </>
   );
 }
