@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+@theme {
+  --color-earth-50: #faf7f2;
+  --color-earth-100: #f0e8db;
+  --color-earth-200: #e0d0b8;
+  --color-earth-300: #c9b08e;
+  --color-earth-400: #b08d5e;
+  --color-earth-500: #8b6914;
+  --color-earth-600: #6b4f0e;
+  --color-earth-700: #4a3609;
+  --color-earth-800: #2d1b0e;
+  --color-earth-900: #1a0f06;
+
+  --color-forest-50: #f0f7f4;
+  --color-forest-100: #d4ead9;
+  --color-forest-200: #a8d4b3;
+  --color-forest-300: #6bb87e;
+  --color-forest-400: #3d9955;
+  --color-forest-500: #2d7a3f;
+  --color-forest-600: #1f5c2d;
+  --color-forest-700: #144020;
+  --color-forest-800: #0a2613;
+  --color-forest-900: #051309;
+
+  --color-sky-50: #f0f7fa;
+  --color-sky-100: #d4eaf5;
+  --color-sky-200: #a8d4eb;
+  --color-sky-300: #6bb8dc;
+  --color-sky-400: #3d99c9;
+  --color-sky-500: #2d7ab0;
+  --color-sky-600: #1f5c85;
+  --color-sky-700: #14405c;
+  --color-sky-800: #0a2636;
+  --color-sky-900: #05131b;
+
+  --color-sunset-50: #fef5f0;
+  --color-sunset-100: #fce4d4;
+  --color-sunset-200: #f9c8a8;
+  --color-sunset-300: #f4a06b;
+  --color-sunset-400: #ef7d3d;
+  --color-sunset-500: #d4602d;
+  --color-sunset-600: #a04820;
+  --color-sunset-700: #6e3116;
+  --color-sunset-800: #3e1c0c;
+  --color-sunset-900: #1f0e06;
+
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-earth-50);
+  color: var(--color-earth-800);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-earth-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-earth-300);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-earth-400);
+}
+
+/* Stamp animation */
+@keyframes stamp {
+  0% { transform: scale(2) rotate(-15deg); opacity: 0; }
+  50% { transform: scale(0.95) rotate(2deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+.stamp-animate {
+  animation: stamp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Paper texture */
+.paper-texture {
+  background-image: 
+    radial-gradient(ellipse at 20% 50%, rgba(139, 105, 20, 0.03) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(45, 122, 63, 0.02) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(212, 96, 45, 0.02) 0%, transparent 50%);
+}
+
+/* Compass rose animation */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.compass-spin {
+  animation: spin-slow 20s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .compass-spin {
+    animation: none;
+  }
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--color-sunset-400);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Safe area padding for mobile */
+.safe-bottom {
+  padding-bottom: max(env(safe-area-inset-bottom, 0px), 1rem);
+}
+
+.safe-top {
+  padding-top: max(env(safe-area-inset-top, 0px), 1rem);
+}
+
+/* Hide scrollbar but keep scroll functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
